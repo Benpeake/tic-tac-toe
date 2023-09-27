@@ -24,6 +24,12 @@ const setNamesBtn = document.querySelector('.setNames')
 const chooseNameP1 = document.getElementById('chooseNameP1')
 const chooseNameP2 = document.getElementById('chooseNameP2')
 
+const player1Turn = document.querySelector('.player-info1')
+const player1TurnOther = document.querySelector('.sub-info1')
+
+const player2Turn = document.querySelector('.player-info2')
+const player2TurnOther = document.querySelector('.sub-info2')
+
 
 //player factory
 const playerFactory = (name, symbol) => {
@@ -90,12 +96,25 @@ function handleSquareClick(square) {
     if(resultText.innerHTML == ''){
     if (square.innerHTML === '') {
       if (currentPlayer === player1) {
+        player2Turn.classList.add('green')
+        player2TurnOther.classList.add('sub-info-green')
+
+        player1Turn.classList.remove('green')
+        player1TurnOther.classList.remove('sub-info-green')
+
         player1.move(square)
         player1.moves.push(square)
         gameBoard.gameMoves++
         checkWin()
         currentPlayer = player2
       } else {
+
+        player1Turn.classList.add('green')
+        player1TurnOther.classList.add('sub-info-green')
+
+        player2Turn.classList.remove('green')
+        player2TurnOther.classList.remove('sub-info-green')
+
         player2.move(square)
         player2.moves.push(square)
         gameBoard.gameMoves++
@@ -135,3 +154,4 @@ function restartGame() {
 }
 
 restartBtn.addEventListener('click', restartGame)
+
