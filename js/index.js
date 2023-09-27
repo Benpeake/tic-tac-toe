@@ -12,12 +12,13 @@ const resultText = document.querySelector('.result')
 
 const restartBtn = document.querySelector('.restart')
 
-const players = document.querySelector('.players')
-
 const player1Score = document.querySelector('.player1Wins')
 const player1Display = document.querySelector('.player1')
+const player1Symbol = document.querySelector('.player1-symbol')
+
 const player2Score = document.querySelector('.player2Wins')
 const player2Display = document.querySelector('.player2')
+const player2Symbol = document.querySelector('.player2-symbol')
 
 const setNamesBtn = document.querySelector('.setNames')
 const chooseNameP1 = document.getElementById('chooseNameP1')
@@ -44,39 +45,16 @@ const playerFactory = (name, symbol) => {
 }
 
 //players
-const player1 = playerFactory('Player 1', `X`)
-const player2 = playerFactory('Player 2', `O`)
+const player1 = playerFactory('P-1', `X`)
+const player2 = playerFactory('P-2', `O`)
 
 
-setNamesBtn.addEventListener('click', (event) => {
-
-    event.preventDefault()
-
-    const name1 = chooseNameP1.value
-    const name2 = chooseNameP2.value
-
-    if (name1 && name2) {
-        player1.setName(name1)
-        player2.setName(name2)
-    }
-
-            // Update player names displayed on the page
-            player1Display.innerHTML = player1.name + ' - ' + player1.symbol
-            player2Display.innerHTML = player2.name + ' - ' + player2.symbol
-            players.innerHTML = `<strong> ${player1.name} V ${player2.name} </strong>`
-            
-            // Reset the input fields
-            chooseNameP1.value = ''
-            chooseNameP2.value = ''
-})
-
-
-
-players.innerHTML = `<strong> ${player1.name} V ${player2.name} </strong>`
-player1Display.innerHTML = player1.name + ' - ' + player1.symbol
-player2Display.innerHTML = player2.name + ' - ' + player2.symbol
+player1Display.innerHTML = player1.name
+player2Display.innerHTML = player2.name
 player1Score.innerHTML = player1.wins
 player2Score.innerHTML = player2.wins
+player1Symbol.innerHTML = player1.symbol
+player2Symbol.innerHTML = player2.symbol
 
 //start game info
 let currentPlayer = player1

@@ -22,47 +22,48 @@
 
     <script defer src="js/index.js"></script>
 </head>
-
 <body>
-    <form class="chooseName">
-        <div>
-        <label for="chooseNameP1">P1 name:</label>
-        <input type="text" id="chooseNameP1" />
+    <div class="game-container">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="container">
+            <div class="arena">
+                <div id="1" class="square"></div>
+                <div id="2" class="square"></div>
+                <div id="3" class="square"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square"></div>
+                <div id="6" class="square"></div>
+                <div id="7" class="square"></div>
+                <div id="8" class="square"></div>
+                <div id="9" class="square"></div>
+            </div>
+            <div class="info-arena">
+                <div class="player-info">
+                    <div class="sub-info-top">
+                        <div><p class="player1 playername"></p></div>
+                        <div><p class="player1-symbol playername"></p></div>
+                    </div>
+                    <div class="sub-info">
+                        <div><p class="playername">wins:</p></div>
+                        <div><p class="playername player1Wins">0</p></div>
+                    </div>
+                </div>
+                <div class="veruses">V</div>
+                <div class="player-info">
+                    <div class="sub-info-top">
+                        <div><p class="player2 playername"></p></div>
+                        <div><p class="player2-symbol playername"></p></div>
+                    </div>
+                    <div class="sub-info">
+                        <div><p class="playername">wins:</p></div>
+                        <div><p class="playername player2Wins">0</p></div>
+                    </div>
+                </div>
+            </div>
+                <button class="restart">Restart Game</button>
+            </div>
+            <div></div><p class="result"></p></div>
         </div>
-        <div>
-        <label for="chooseNameP1">P2 name:</label>
-        <input type="text" id="chooseNameP2" />
-        </div>
-        <button class="setNames">Set Names</button>
-    </form>
-    <div class="container">
-    <p class="players"></p>
-    </div>
-    <div class="gamecontainer">
-        <div class="scoreCount">
-            <p class="player1"></p>
-            <p class ="player1Wins">0</p>
-        </div>  
-    <div class="arena">
-    <div id="1" class="square"></div>
-    <div id="2" class="square"></div>
-    <div id="3" class="square"></div>
-    <div id="4" class="square"></div>
-    <div id="5" class="square"></div>
-    <div id="6" class="square"></div>
-    <div id="7" class="square"></div>
-    <div id="8" class="square"></div>
-    <div id="9" class="square"></div>
-    </div>
-    <div class="scoreCount">
-        <p class="player2"></p>
-        <p class ="player2Wins">0</p>
-    </div>  
-    </div>
-    <div class="container">
-        <button class="restart">Restart Game</button>
-        <h1 class="result"></h1>
     </div>
 </body>
-
 </html>
