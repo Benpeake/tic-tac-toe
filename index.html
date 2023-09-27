@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>tic-tac-toe</title>
+
+    <meta name="description" content="Template HTML file">
+    <meta name="author" content="iO Academy">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.png" sizes="192x192">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <form class="chooseName">
+        <div>
+        <label for="chooseNameP1">P1 name:</label>
+        <input type="text" id="chooseNameP1" />
+        </div>
+        <div>
+        <label for="chooseNameP1">P2 name:</label>
+        <input type="text" id="chooseNameP2" />
+        </div>
+        <button class="setNames">Set Names</button>
+    </form>
+    <div class="container">
+    <p class="players"></p>
+    </div>
+    <div class="gamecontainer">
+        <div class="scoreCount">
+            <p class="player1"></p>
+            <p class ="player1Wins">0</p>
+        </div>  
+    <div class="arena">
+    <div id="1" class="square"></div>
+    <div id="2" class="square"></div>
+    <div id="3" class="square"></div>
+    <div id="4" class="square"></div>
+    <div id="5" class="square"></div>
+    <div id="6" class="square"></div>
+    <div id="7" class="square"></div>
+    <div id="8" class="square"></div>
+    <div id="9" class="square"></div>
+    </div>
+    <div class="scoreCount">
+        <p class="player2"></p>
+        <p class ="player2Wins">0</p>
+    </div>  
+    </div>
+    <div class="container">
+        <button class="restart">Restart Game</button>
+        <h1 class="result"></h1>
+    </div>
+</body>
+
+</html>
