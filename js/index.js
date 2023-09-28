@@ -143,7 +143,9 @@ function checkWin() {
       resultText.innerHTML = `${player1.name} and ${player2.name} draw`;
     }
   }
-  
+
+
+//restart game logic 
 function restartGame() {
     gameBoard.squares.forEach(square => {
         square.innerHTML = ''
