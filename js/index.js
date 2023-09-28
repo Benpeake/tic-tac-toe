@@ -86,16 +86,12 @@ let gameBoard = {
     
 }
 
-//handle player moving 
-gameBoard.squares.forEach(square => {
-    square.addEventListener('click', () => handleSquareClick(square))
-})
-
 //handle click/move
 function handleSquareClick(square) {
     if(resultText.innerHTML == ''){
     if (square.innerHTML === '') {
       if (currentPlayer === player1) {
+
         player2Turn.classList.add('green')
         player2TurnOther.classList.add('sub-info-green')
 
@@ -124,6 +120,11 @@ function handleSquareClick(square) {
     }
     }
   }
+
+  //handle player moving 
+gameBoard.squares.forEach(square => {
+  square.addEventListener('click', () => handleSquareClick(square))
+})
 
 function checkWin() {
     let win = false;
